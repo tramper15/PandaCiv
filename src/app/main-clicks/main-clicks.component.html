@@ -1,2 +1,11 @@
-<p><button (click)="addBamboo()">Harvest Bamboo</button> {{ recourse.food }}</p>
-Yes
+
+<div class="row">
+  <div class="col-12"><button type="button" class="btn btn-default" (click)="addBamboo()">Harvest Bamboo</button> </div>
+</div>
+<div class="row">
+  <div class="col-6">Food</div>
+  <div class="col-6">{{ recourse.food }}</div>
+  <div class="col-6">Wood</div>
+  <div class="col-6">{{ recourse.wood }}</div>
+</div>
+

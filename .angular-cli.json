@@ -21,7 +21,17 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/startbootstrap-sb-admin/vendor/jquery/jquery.min.js",
+        "../node_modules/startbootstrap-sb-admin/vendor/bootstrap/js/bootstrap.bundle.min.js",
+        "../node_modules/startbootstrap-sb-admin/vendor/jquery-easing/jquery.easing.min.js",
+        "../node_modules/startbootstrap-sb-admin/vendor/chart.js/Chart.min.js",
+        "../node_modules/startbootstrap-sb-admin/vendor/datatables/jquery.dataTables.js",
+        "../node_modules/startbootstrap-sb-admin/vendor/datatables/dataTables.bootstrap4.js",
+        "../node_modules/startbootstrap-sb-admin/js/sb-admin.min.js",
+        "../node_modules/startbootstrap-sb-admin/js/sb-admin-datatables.min.js",
+        "../node_modules/startbootstrap-sb-admin/js/sb-admin-charts.min.js",
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
