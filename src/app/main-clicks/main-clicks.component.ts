@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Recourse} from '../core/recourse';
+import {ResourcesService} from '../service/resourses.service';
+import {Resources} from '../class/resourse';
 
 @Component({
   selector: 'app-main-clicks',
@@ -8,17 +9,18 @@ import {Recourse} from '../core/recourse';
 })
 export class MainClicksComponent implements OnInit {
 
-  recourse: Recourse;
+  public resource: Resources;
 
-  constructor() {
-    this.recourse = new Recourse();
+   constructor(private resourseCalls: ResourcesService) {
+      this.resource = this.resourseCalls.resource;
   }
 
   ngOnInit() {
   }
 
   addBamboo() {
-     this.recourse.addFood();
-    this.recourse.addWood();
+    this.resourseCalls.addFood();
+    this.resourseCalls.addWood();
+    console.log('Works');
   }
 }

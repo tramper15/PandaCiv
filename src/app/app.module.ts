@@ -11,6 +11,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HeroesComponent } from './heroes/heroes.component';
 import { MainClicksComponent } from './main-clicks/main-clicks.component';
+import {ResourcesService} from './service/resourses.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAwtzK6MyXY2NhE7bf4_cEYscGjSQHANi4',
@@ -33,7 +34,7 @@ export const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [ResourcesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
