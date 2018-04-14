@@ -1,0 +1,10 @@
+<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts" [hidden]="loggedIn">
+  <a class="nav-link" (click)="login()">
+    <span class="nav-link-text">Login</span>
+  </a>
+</li>
+<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts" [hidden]="!loggedIn">
+  <a class="nav-link" (click)="logout()">
+    <span class="nav-link-text">Logout</span>
+  </a>
+</li>

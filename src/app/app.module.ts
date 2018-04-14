@@ -12,6 +12,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HeroesComponent } from './heroes/heroes.component';
 import { MainClicksComponent } from './main-clicks/main-clicks.component';
 import {ResourcesService} from './service/resourses.service';
+import {AuthenticationService} from './service/authentication.service';
+import { LoginComponent } from './login/login.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAwtzK6MyXY2NhE7bf4_cEYscGjSQHANi4',
@@ -26,7 +28,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HeroesComponent,
-    MainClicksComponent
+    MainClicksComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ export const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [ResourcesService],
+  providers: [ResourcesService,
+                AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
