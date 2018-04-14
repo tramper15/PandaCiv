@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
-import { AngularFireModule } from 'angularfire2';
+import {AngularFireModule} from 'angularfire2';
 
 // New imports to update based on AngularFire2 version 4
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { HeroesComponent } from './heroes/heroes.component';
-import { MainClicksComponent } from './main-clicks/main-clicks.component';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import {MainClicksComponent} from './main-clicks/main-clicks.component';
 import {ResourcesService} from './service/resourses.service';
 import {AuthenticationService} from './service/authentication.service';
-import { LoginComponent } from './login/login.component';
+import {LoginComponent} from './login/login.component';
+import {DatabaseStoreService} from './service/database-store.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAwtzK6MyXY2NhE7bf4_cEYscGjSQHANi4',
@@ -27,7 +27,6 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
     MainClicksComponent,
     LoginComponent
   ],
@@ -38,7 +37,9 @@ export const firebaseConfig = {
     AngularFireAuthModule
   ],
   providers: [ResourcesService,
-                AuthenticationService],
+    AuthenticationService,
+    DatabaseStoreService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

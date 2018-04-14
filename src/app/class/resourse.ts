@@ -1,4 +1,5 @@
 export class Resources {
+  public userId: string;
   public food: number;
   public wood: number;
 
@@ -7,3 +8,4 @@ export class Resources {
     this.wood = 0;
   }
 }
+
