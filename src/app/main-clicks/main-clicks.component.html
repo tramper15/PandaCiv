@@ -1,14 +1,32 @@
-<div class="card grey darken-4">
-  <div class="card-content white-text">
-    <span class="card-title"><i class="material-icons">donut_large</i>  Doing Work</span>
-    <button type="button" class="btn waves-effect waves-green" (click)="addBamboo()">Harvest Bamboo</button>
+<div class="row">
+  <div class="card grey darken-4">
+    <div class="card-content white-text">
+      <span class="card-title"><i class="material-icons">donut_large</i>  Doing Work</span>
+      <button type="button" class="btn waves-effect waves-green" (click)="addBamboo()">Harvest Bamboo</button>
+    </div>
   </div>
 </div>
-<div class="card grey darken-4">
-  <div class="card-content white-text">
-    <span class="card-title"><i class="material-icons">pie_chart</i>  Resources</span>
-    <div class="flow-text">Food <span class="badge white-text">{{ resource.food }}</span></div>
-    <div class="flow-text">Wood<span class="badge white-text">{{ resource.wood }}</span></div>
+<div class="row">
+  <div class="card grey darken-4">
+    <div class="card-content white-text">
+      <span class="card-title"><i class="material-icons">pie_chart</i>  Resources</span>
+      <div class="flow-text">Food <span class="badge white-text">{{ resource.food }}</span></div>
+      <div class="flow-text">Wood<span class="badge white-text">{{ resource.wood }}</span></div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="card grey darken-4">
+    <div class="card-content white-text">
+      <span class="card-title"><i class="material-icons">business</i> Buildings</span>
+      <ul>
+        <li *ngFor="let building of buildings">
+        <span>
+          {{building.name}}, {{building.canBuy}} <button class="btn btn-call btn-sm" (click)="buyBuilding(building)" (hidden)="building.canBuy"><i class="material-icons">add</i></button>
+        </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <button type="button" class="btn blue" (click)="save()">save</button>

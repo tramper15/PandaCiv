@@ -15,6 +15,7 @@ import {AuthenticationService} from './service/authentication.service';
 import {LoginComponent} from './login/login.component';
 import {DatabaseStoreService} from './service/database-store.service';
 import {MaterializeModule} from 'angular2-materialize';
+import {BuildingService} from './service/building.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAwtzK6MyXY2NhE7bf4_cEYscGjSQHANi4',
@@ -39,7 +40,8 @@ export const firebaseConfig = {
   ],
   providers: [ResourcesService,
     AuthenticationService,
-    DatabaseStoreService],
+    DatabaseStoreService,
+    BuildingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
