@@ -1,5 +1,4 @@
 export class Resources {
-  public userId: string;
   public food: number;
   public wood: number;
 

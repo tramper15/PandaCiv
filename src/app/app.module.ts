@@ -14,6 +14,7 @@ import {ResourcesService} from './service/resourses.service';
 import {AuthenticationService} from './service/authentication.service';
 import {LoginComponent} from './login/login.component';
 import {DatabaseStoreService} from './service/database-store.service';
+import {MaterializeModule} from 'angular2-materialize';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAwtzK6MyXY2NhE7bf4_cEYscGjSQHANi4',

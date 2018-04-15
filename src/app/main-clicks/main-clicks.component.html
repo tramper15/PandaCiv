@@ -1,14 +1,15 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title"><i class="material-icons">donut_large</i>  Doing Work</span>
+    <button type="button" class="btn waves-effect" (click)="addBamboo()">Harvest Bamboo</button>
+  </div>
+</div><div class="card">
+  <div class="card-content">
+    <span class="card-title"><i class="material-icons">pie_chart</i>  Resources</span>
+    <div class="flow-text">Food <span class="badge">{{ resource.food }}</span></div>
+    <div class="flow-text">Wood<span class="badge">{{ resource.wood }}</span></div>
+  </div>
+</div>
+<button type="button" class="btn blue" (click)="save()">save</button>
 
-<div class="row">
-  <div class="col-12"><button type="button" class="btn btn-default" (click)="addBamboo()">Harvest Bamboo</button> </div>
-</div>
-<div class="row">
-  <div class="col-6">Food</div>
-  <div class="col-6">{{ resource.food }}</div>
-  <div class="col-6">Wood</div>
-  <div class="col-6">{{ resource.wood }}</div>
-</div>
-<div>
-  <button type="button" (click)="save()">save</button>
-</div>
 

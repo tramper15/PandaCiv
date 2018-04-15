@@ -15,7 +15,6 @@ export class MainClicksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.resourseCalls.setItems();
     this.resource = this.resourseCalls.resource;
   }
 

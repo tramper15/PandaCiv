@@ -17,6 +17,13 @@ export class ResourcesService {
     this.resource.wood += 1;
   }
 
+  setItem() {
+    this.database.getItem().snapshotChanges().map(changes => {
+        const data = changes.payload.data() as Resources;
+        this.resource = data;
+        console.log(data);
+    });
+  }
   setItems() {
     this.database.getItems().subscribe(items => {
 

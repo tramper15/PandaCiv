@@ -14,10 +14,15 @@ export class DatabaseStoreService {
   constructor(public afs: AngularFirestore) {
     this.resoursesCollection = this.afs.collection<Resources>('Resourse');
     this.resourses = this.resoursesCollection.valueChanges();
+    this.resoursesDoc = this.afs.doc('Resourse/Test');
   }
 
   getItems() {
     return this.resourses;
+  }
+
+  getItem() {
+    return this.resoursesDoc;
   }
 
   updateResrouse(resourse: Resources) {
