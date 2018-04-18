@@ -24,22 +24,25 @@ export class MainClicksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.resource = this.resourseCalls.resource;
-    this.buildings = this.buildingCalls.buildings;
-    this.hasBuildings = this.buildingCalls.hasBuildings;
+    this.resourseCalls.getResource().subscribe(resource => this.resource = resource);
+    this.buildingCalls.getBuildings().subscribe(buildings => this.buildings = buildings);
+    this.buildingCalls.getHasBuildings().subscribe(hasBuildings => this.hasBuildings = hasBuildings);
   }
 
   addBamboo() {
     this.resourseCalls.addFood();
     this.resourseCalls.addWood();
-    this.resource = this.resourseCalls.resource;
+    this.buildingCalls.updateUsage(this.resource);
+    this.buildingCalls.getHasBuildings().subscribe(hasBuildings => this.hasBuildings = hasBuildings);
   }
 
   buyBuilding(building: Building) {
      this.buildingCalls.buyBuilding(building);
+     this.buildingCalls.updateUsage(this.resource);
   }
 
   save() {
     this.database.updateResrouse(this.resource);
+    this.resourseCalls.getResource().subscribe(resource => this.resource = resource);
   }
 }

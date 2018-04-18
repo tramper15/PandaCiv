@@ -14,7 +14,6 @@ import {ResourcesService} from './service/resourses.service';
 import {AuthenticationService} from './service/authentication.service';
 import {LoginComponent} from './login/login.component';
 import {DatabaseStoreService} from './service/database-store.service';
-import {MaterializeModule} from 'angular2-materialize';
 import {BuildingService} from './service/building.service';
 
 export const firebaseConfig = {
