@@ -2,7 +2,7 @@
   <div class="card grey darken-4">
     <div class="card-content white-text">
       <span class="card-title"><i class="material-icons">donut_large</i>  Doing Work</span>
-      <button type="button" class="btn waves-effect waves-green" (click)="addBamboo()">Harvest Bamboo</button>
+      <button type="button" class="btn teal darken-2 waves-effect waves-teal" (click)="addBamboo()">Harvest Bamboo</button>
     </div>
   </div>
 </div>
@@ -20,10 +20,12 @@
     <div class="card-content white-text">
       <span class="card-title"><i class="material-icons">business</i> Buildings</span>
       <ul>
-        <li *ngFor="let building of buildings">
-        <span>
-          {{building.name}}, {{building.canBuy}} <button class="btn btn-call btn-sm" (click)="buyBuilding(building)" (hidden)="building.canBuy"><i class="material-icons">add</i></button>
-        </span>
+        <li *ngFor="let building of buildings" class="valign-wrapper">
+          <span>
+            {{building.name}}
+            <span [hidden]="building.isBought"><button class="btn-floating btn-sm circle teal" (click)="buyBuilding(building)" ><i class="material-icons small">add</i></button></span>
+            <span [hidden]="!building.isBought"><button class="btn-floating btn-sm circle teal" (click)="assignPandaToBuilding(building)" ><i class="material-icons small">assignment_ind</i></button></span>
+          </span>
         </li>
       </ul>
     </div>

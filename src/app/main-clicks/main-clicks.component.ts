@@ -41,6 +41,10 @@ export class MainClicksComponent implements OnInit {
      this.buildingCalls.updateUsage(this.resource);
   }
 
+  assignPandaToBuilding(building: Building) {
+    this.buildingCalls.assignPandaToBuilding(building);
+    this.buildingCalls.updateUsage(this.resource);
+  }
   save() {
     this.database.updateResrouse(this.resource);
     this.resourseCalls.getResource().subscribe(resource => this.resource = resource);

@@ -7,7 +7,6 @@ import {of} from 'rxjs/observable/of';
 @Injectable()
 export class BuildingService {
   public buildings: Building[];
-  public hasBuildings: boolean;
 
   constructor() {
       this.buildings = [];
