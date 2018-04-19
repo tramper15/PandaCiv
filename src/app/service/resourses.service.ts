@@ -47,4 +47,9 @@ export class ResourcesService {
   getResource(): Observable<Resources> {
     return of(this.resource);
   }
+
+  spendResource(foodSpent: number, woodSpent: number) {
+    this.resource.food -= foodSpent;
+    this.resource.wood -= woodSpent;
+  }
 }

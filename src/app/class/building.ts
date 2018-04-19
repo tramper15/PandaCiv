@@ -5,4 +5,8 @@ export interface Building {
   assignedPandas: number;
   woodNeeded: number;
   foodNeeded: number;
+  canAssignPandas: boolean;
+  resourceType: string;
+  perTick: number;
+  pandasAccepted: boolean;
 }

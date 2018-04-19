@@ -22,9 +22,9 @@
       <ul>
         <li *ngFor="let building of buildings" class="valign-wrapper">
           <span>
-            {{building.name}}
+            <span>{{building.name}}</span>
             <span [hidden]="building.isBought"><button class="btn-floating btn-sm circle teal" (click)="buyBuilding(building)" ><i class="material-icons small">add</i></button></span>
-            <span [hidden]="!building.isBought"><button class="btn-floating btn-sm circle teal" (click)="assignPandaToBuilding(building)" ><i class="material-icons small">assignment_ind</i></button></span>
+            <span [hidden]="!building.canAssignPandas"><button class="btn-floating btn-sm circle teal" (click)="assignPandaToBuilding(building)" ><i class="material-icons small">assignment_ind</i></button></span>
           </span>
         </li>
       </ul>
